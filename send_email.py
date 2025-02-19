@@ -3,7 +3,7 @@ import os
 port = 465
 smtp_server = "smtp.gmail.com"
 
-USERNAME = os.environ.get('USER_EMAIL')   # instead of giving our email we're utilizing env varibale to secure the creds
+USERNAME = os.environ.get('USER_EMAIL')   # we're utilizing env varibale to secure the creds
 PASSWORD = os.environ.get('USER_PASSWORD')
 message = """\
 Subject: Github Email report
