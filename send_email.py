@@ -7,7 +7,7 @@ USERNAME = os.environ.get('USER_EMAIL')   # instead of giving our email we're ut
 PASSWORD = os.environ.get('USER_PASSWORD')
 message = """\
 Subject: Github Email report
-This is your email email notification"""
+This is your email notification"""
 
 context = ssl.create_default_context()
 
