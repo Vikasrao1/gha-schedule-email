@@ -12,5 +12,5 @@ This is your email email notification"""
 context = ssl.create_default_context()
 
 with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
-server.login(USERNAME,PASSWORD) # we're logging into smtp server
-server.sendmail(USERNAME,USERNAME, message) # we're sending it to ourself
+  server.login(USERNAME,PASSWORD) # we're logging into smtp server
+  server.sendmail(USERNAME,USERNAME, message) # we're sending it to ourself
