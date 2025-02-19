@@ -18,4 +18,4 @@ jobs:
               env:
                 USER_EMAIL: ${{ secrets.USER_EMAIL }} # env variable
                 USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
-              run: python .github/workflows/send_email.py
+              run: python send_email.py
