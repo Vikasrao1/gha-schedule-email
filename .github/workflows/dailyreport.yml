@@ -1,0 +1,21 @@
+name: daily-report
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Run every 5 min
+  workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-python@v2
+              with:
+                python-version: 3.x
+              
+            - name: Run email script
+              env:
+                USER_EMAIL: ${{ secrets.USER_EMAIL }} # env variable
+                USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
+              run: python send email.py
